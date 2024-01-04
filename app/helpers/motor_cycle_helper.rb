@@ -1,0 +1,2 @@
+module MotorCycleHelper
+end
