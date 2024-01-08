@@ -1,0 +1,2 @@
+class Fbr < ApplicationRecord
+end

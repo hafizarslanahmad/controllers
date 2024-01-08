@@ -14,4 +14,7 @@ class MobileController < ApplicationController
 
     def camra
     end
+
+
+    
 end

@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_05_162725) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_08_160833) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "customers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone_no"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "electronics", force: :cascade do |t|
     t.string "customer_name"
@@ -21,6 +30,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_162725) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "customer_id"
+  end
+
+  create_table "fbrs", force: :cascade do |t|
+    t.string "name"
+    t.string "bank"
+    t.string "tex"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "hospitals", force: :cascade do |t|
@@ -53,6 +70,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_162725) do
     t.datetime "updated_at", null: false
     t.integer "passenger_name"
     t.integer "driver_name"
+  end
+
+  create_table "tex_houses", force: :cascade do |t|
+    t.string "name"
+    t.string "bank"
+    t.string "field"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

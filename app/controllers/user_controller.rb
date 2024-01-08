@@ -1,5 +1,6 @@
 class UserController < ApplicationController
-    def new 
+    def new
+        @user = User.new
     end
 
     def update
@@ -13,4 +14,5 @@ class UserController < ApplicationController
 
     def show 
     end
+
 end

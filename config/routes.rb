@@ -1,10 +1,28 @@
 Rails.application.routes.draw do
+  #get 'fbrs/index'
+  #get 'fbrs/new'
+  #get 'fbrs/edit'
+  #get 'fbrs/show'
+  resources :fbrs
+
+  #get 'tex_houses/index'
+  #get 'tex_houses/new'
+  #get 'tex_houses/edit'
+  #get 'tex_houses/show'
+  
+  resources :tex_houses
+  #get 'customers/index'
+  #get 'customers/show'
+  #get 'customers/new'
+  #get 'customers/edit'
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'customers#index'
+  resources :customers
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
-
   # Defines the root path route ("/")
   get 'user_new', to:"user#new"
   get 'user_update', to:"user#update"
@@ -65,6 +83,9 @@ Rails.application.routes.draw do
   get "fragrance", to: "cosmetics#fragrance"
   get "lotion", to: "cosmetics#lotion"
   get "soap", to: "cosmetics#soap"
+
+
+  
 
    # root "posts#index"  
 end

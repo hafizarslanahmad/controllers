@@ -1,0 +1,25 @@
+<h1>Index Page </h1>
+
+
+<div class="row justify-content-center">
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th> 
+        <th scope="col" colspan="3">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @fbrs.each do |fbr| %>
+        <tr>
+            <th scope="row">#</th>
+            <td><%= fbr.name %></td>
+            <td><%= link_to 'Show', fbr_path(fbr.id) %></td> 
+            <td><%= link_to 'Edit', edit_fbr_path(fbr.id) %></td> 
+            <td><%= button_to 'Delete', fbr_path(fbr), method: 'delete' %></td>            
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
+</div>
