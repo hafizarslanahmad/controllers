@@ -1,0 +1,25 @@
+<h1>Bags#index</h1>
+<td><%= link_to 'new create', new_bag_path%></td>
+
+<div class="row justify-content-center">
+  <table class="table table-bordered">
+     <thead>
+        <tr>
+           <th scop='col'>Book</th>
+           <th scop='col' colspan="3" >Action</th>
+        </tr>
+     </thead>
+     <tbody>
+       <% @bags.each do |bag|%>
+        <tr> 
+           <td><%= bag.book %></td>
+           <td><%= link_to 'Show', bag_path(bag.id)%></td>
+           <td><%= link_to 'Edit', edit_bag_path(bag.id)%></td>
+           <td><%= button_to 'Delete', bag_path(bag.id), method: 'delete'%></td>
+        </tr>
+       <%end%> 
+     </tbody>
+  </table>
+</div>
+
+

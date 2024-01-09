@@ -1,0 +1,24 @@
+<h1>Foods#index</h1>
+<td><%= link_to 'new create', new_food_path%></td>
+
+<div class="row justify-content-center">
+  <table class="table table-bordered">
+     <thead>
+        <tr>
+           <th scop='col'>Name</th>
+           <th scop='col' colspan="3" >Action</th>
+        </tr>
+     </thead>
+     <tbody>
+       <% @foods.each do |food|%>
+        <tr> 
+           <td><%= food.name %></td>
+           <td><%= link_to 'Show', food_path(food.id)%></td>
+           <td><%= link_to 'Edit', edit_food_path(food.id)%></td>
+           <td><%= button_to 'Delete', food_path(food.id), method: 'delete'%></td>
+        </tr>
+       <%end%> 
+     </tbody>
+  </table>
+</div>
+

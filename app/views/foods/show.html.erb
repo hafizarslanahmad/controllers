@@ -1,0 +1,21 @@
+<h1>Foods#show</h1>
+<div class="row justify-content-center">
+  <table class="table table-bordered">
+        <tr>
+            <th scope="col">Name</th>
+            <td><%= @food.name%></td>          
+        </tr>
+        <tr>
+            <th scope="col">Price</th>
+            <td><%= @food.price%></td>          
+        </tr>
+        <tr>
+            <th scope="col">Qulity</th>
+            <td><%= @food.qulity%></td>          
+        </tr>
+  </table>
+</div>
+<div>
+   <%= link_to 'back to index', foods_path%>
+</div>   
+

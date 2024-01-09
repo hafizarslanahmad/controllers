@@ -1,16 +1,26 @@
 Rails.application.routes.draw do
+  
+  
+  resources :bags
+  resources :foods
+  #get 'tvs/index'
+  #get 'tvs/new'
+  #get 'tvs/edit'
+  #get 'tvs/show'
+  resources :tvs
+  #get 'autos/index'
+  #get 'autos/edit'
+  #get 'autos/show'
+  #get 'autos/new'
+  resources :autos
+  
   #get 'fbrs/index'
   #get 'fbrs/new'
   #get 'fbrs/edit'
   #get 'fbrs/show'
   resources :fbrs
 
-  #get 'tex_houses/index'
-  #get 'tex_houses/new'
-  #get 'tex_houses/edit'
-  #get 'tex_houses/show'
   
-  resources :tex_houses
   #get 'customers/index'
   #get 'customers/show'
   #get 'customers/new'

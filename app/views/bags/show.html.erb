@@ -1,0 +1,22 @@
+<h1>Bags#show</h1>
+<div class="row justify-content-center">
+  <table class="table table-bordered">
+        <tr>
+            <th scope="col">Book</th>
+            <td><%= @bag.book%></td>          
+        </tr>
+        <tr>
+            <th scope="col">Register</th>
+            <td><%= @bag.register%></td>          
+        </tr>
+        <tr>
+            <th scope="col">Pencil</th>
+            <td><%= @bag.pencil%></td>          
+        </tr>
+  </table>
+</div>
+<div>
+   <%= link_to 'back to index', bags_path%>
+</div>   
+
+

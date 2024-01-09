@@ -10,9 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_08_160833) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_09_145235) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "auto_mobiles", force: :cascade do |t|
+    t.string "vehical"
+    t.string "color"
+    t.string "company"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "autos", force: :cascade do |t|
+    t.string "vehical"
+    t.string "color"
+    t.string "company"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bags", force: :cascade do |t|
+    t.string "book"
+    t.string "register"
+    t.string "pencil"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
@@ -40,6 +64,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_08_160833) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "foods", force: :cascade do |t|
+    t.string "name"
+    t.string "price"
+    t.string "qulity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "hospitals", force: :cascade do |t|
     t.string "doctor_name"
     t.string "parking_token"
@@ -53,6 +85,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_08_160833) do
     t.datetime "updated_at", null: false
     t.integer "item_price"
     t.string "taste_type"
+  end
+
+  create_table "mobile_autos", force: :cascade do |t|
+    t.string "vehical"
+    t.string "color"
+    t.string "company"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pharmecies", force: :cascade do |t|
@@ -76,6 +116,24 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_08_160833) do
     t.string "name"
     t.string "bank"
     t.string "field"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tvs", force: :cascade do |t|
+    t.string "name"
+    t.string "company"
+    t.string "price"
+    t.string "model"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "universities", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.string "campus"
+    t.string "degree"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
